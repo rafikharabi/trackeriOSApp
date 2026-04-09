@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Symbol Detail View Controller-->
+        <scene sceneID="symbolDetailScene">
+            <objects>
+                <viewController storyboardIdentifier="SymbolDetailViewController" id="SymbolDetailVC" customClass="SymbolDetailViewController" customModule="RealTimeStockTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAPL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="symbolLabel">
+                                <rect key="frame" x="20" y="138" width="353" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$175.50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="priceLabel">
+                                <rect key="frame" x="20" y="206" width="353" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+$2.30 (1.33%)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="changeLabel">
+                                <rect key="frame" x="20" y="252" width="353" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="separatorLine">
+                                <rect key="frame" x="20" y="296" width="353" height="1"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="separatorHeight"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sectionTitleLabel">
+                                <rect key="frame" x="20" y="317" width="353" height="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="descriptionTextView">
+                                <rect key="frame" x="20" y="361" width="353" height="403"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal computers; iPad, a line of multi-purpose tablets; and wearables, home, and accessories including AirPods, Apple Watch, and Beats products. It also provides AppleCare support services; cloud services; and operates various platforms, including the App Store, Apple Arcade, Apple Music, Apple News+, Apple TV+, and Apple Fitness+. The company sells its products through its retail stores, online stores, and direct sales force, as well as through third-party cellular network carriers, wholesalers, retailers, and resellers.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" systemColor="opaqueSeparatorColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="priceIndicatorView">
+                                <rect key="frame" x="130.66666666666666" y="258" width="12" height="12"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="indicatorHeight"/>
+                                    <constraint firstAttribute="width" constant="12" id="indicatorWidth"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="priceSectionTitleLabel">
+                                <rect key="frame" x="20" y="190" width="353" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="safeArea"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="changeLabel" firstAttribute="leading" secondItem="safeArea" secondAttribute="leading" constant="20" id="changeLeadingConstraint"/>
+                            <constraint firstItem="changeLabel" firstAttribute="top" secondItem="priceLabel" secondAttribute="bottom" constant="8" id="changeTopConstraint"/>
+                            <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="changeLabel" secondAttribute="trailing" constant="20" id="changeTrailingConstraint"/>
+                            <constraint firstItem="safeArea" firstAttribute="bottom" secondItem="descriptionTextView" secondAttribute="bottom" constant="20" id="descriptionBottomConstraint"/>
+                            <constraint firstItem="descriptionTextView" firstAttribute="leading" secondItem="safeArea" secondAttribute="leading" constant="20" id="descriptionLeadingConstraint"/>
+                            <constraint firstItem="descriptionTextView" firstAttribute="top" secondItem="sectionTitleLabel" secondAttribute="bottom" constant="16" id="descriptionTopConstraint"/>
+                            <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="descriptionTextView" secondAttribute="trailing" constant="20" id="descriptionTrailingConstraint"/>
+                            <constraint firstItem="priceIndicatorView" firstAttribute="centerX" secondItem="changeLabel" secondAttribute="centerX" constant="-60" id="indicatorCenterXConstraint"/>
+                            <constraint firstItem="priceIndicatorView" firstAttribute="centerY" secondItem="changeLabel" secondAttribute="centerY" id="indicatorCenterYConstraint"/>
+                            <constraint firstItem="priceLabel" firstAttribute="leading" secondItem="safeArea" secondAttribute="leading" constant="20" id="priceLeadingConstraint"/>
+                            <constraint firstItem="priceSectionTitleLabel" firstAttribute="leading" secondItem="safeArea" secondAttribute="leading" constant="20" id="priceTitleLeadingConstraint"/>
+                            <constraint firstItem="priceSectionTitleLabel" firstAttribute="top" secondItem="symbolLabel" secondAttribute="bottom" constant="4" id="priceTitleTopConstraint"/>
+                            <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="priceSectionTitleLabel" secondAttribute="trailing" constant="20" id="priceTitleTrailingConstraint"/>
+                            <constraint firstItem="priceLabel" firstAttribute="top" secondItem="priceSectionTitleLabel" secondAttribute="bottom" id="priceTopConstraint"/>
+                            <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="priceLabel" secondAttribute="trailing" constant="20" id="priceTrailingConstraint"/>
+                            <constraint firstItem="sectionTitleLabel" firstAttribute="leading" secondItem="safeArea" secondAttribute="leading" constant="20" id="sectionTitleLeadingConstraint"/>
+                            <constraint firstItem="sectionTitleLabel" firstAttribute="top" secondItem="separatorLine" secondAttribute="bottom" constant="20" id="sectionTitleTopConstraint"/>
+                            <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="sectionTitleLabel" secondAttribute="trailing" constant="20" id="sectionTitleTrailingConstraint"/>
+                            <constraint firstItem="separatorLine" firstAttribute="leading" secondItem="safeArea" secondAttribute="leading" constant="20" id="separatorLeadingConstraint"/>
+                            <constraint firstItem="separatorLine" firstAttribute="top" secondItem="changeLabel" secondAttribute="bottom" constant="20" id="separatorTopConstraint"/>
+                            <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="separatorLine" secondAttribute="trailing" constant="20" id="separatorTrailingConstraint"/>
+                            <constraint firstItem="symbolLabel" firstAttribute="leading" secondItem="safeArea" secondAttribute="leading" constant="20" id="symbolLeadingConstraint"/>
+                            <constraint firstItem="symbolLabel" firstAttribute="top" secondItem="safeArea" secondAttribute="top" constant="20" id="symbolTopConstraint"/>
+                            <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="symbolLabel" secondAttribute="trailing" constant="20" id="symbolTrailingConstraint"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeLabel" destination="changeLabel" id="changeLabelOutlet"/>
+                        <outlet property="descriptionTextView" destination="descriptionTextView" id="descriptionTextViewOutlet"/>
+                        <outlet property="priceIndicatorView" destination="priceIndicatorView" id="priceIndicatorViewOutlet"/>
+                        <outlet property="priceLabel" destination="priceLabel" id="priceLabelOutlet"/>
+                        <outlet property="symbolLabel" destination="symbolLabel" id="symbolLabelOutlet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="firstResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="-53"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24765"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StockCell" id="KGk-d7-dr8" customClass="StockCell" customModule="RealTimeStockTracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-d7-dr8" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAPL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sym">
+                        <rect key="frame" x="16" y="12.666666666666664" width="52" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$175.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="price">
+                        <rect key="frame" x="239" y="14" width="65" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="yde-Hw-oFt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+$2.30 (1.33%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="change">
+                        <rect key="frame" x="16" y="36.666666666666664" width="94" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="indicator">
+                        <rect key="frame" x="264" y="14" width="8" height="21"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="jR7-h7-Rqe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="change" firstAttribute="leading" secondItem="sym" secondAttribute="leading" id="3lD-3a-X0I"/>
+                    <constraint firstItem="price" firstAttribute="centerY" secondItem="sym" secondAttribute="centerY" id="6Hp-N0-iH1"/>
+                    <constraint firstItem="indicator" firstAttribute="centerY" secondItem="price" secondAttribute="centerY" id="Ahr-nX-3Jh"/>
+                    <constraint firstItem="sym" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="0.7" id="KfO-L5-Zob"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="indicator" secondAttribute="trailing" constant="32" id="SP7-zw-ZqT"/>
+                    <constraint firstItem="change" firstAttribute="top" secondItem="sym" secondAttribute="bottom" id="VgU-uO-6br"/>
+                    <constraint firstItem="price" firstAttribute="trailing" secondItem="indicator" secondAttribute="leading" constant="-8" id="dQ2-Uu-1NO"/>
+                    <constraint firstItem="sym" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="eM3-PK-WWg"/>
+                    <constraint firstItem="price" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="gkY-Ca-ZOi"/>
+                    <constraint firstItem="indicator" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-119" id="q8U-2J-eMU"/>
+                    <constraint firstItem="indicator" firstAttribute="height" secondItem="price" secondAttribute="height" id="x2s-NC-tlY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="changeIndicatorView" destination="indicator" id="Bua-Ul-mQ6"/>
+                <outlet property="changeLabel" destination="change" id="A3K-S1-h2R"/>
+                <outlet property="priceLabel" destination="price" id="ekT-Pe-pk1"/>
+                <outlet property="symbolLabel" destination="sym" id="v9z-9E-UHR"/>
+            </connections>
+            <point key="canvasLocation" x="63" y="31"/>
+        </tableViewCell>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
